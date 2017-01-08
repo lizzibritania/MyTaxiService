@@ -1,4 +1,6 @@
-import Objects.CreditCard;
+package lists;
+
+import objects.CreditCard;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,13 +11,18 @@ import java.io.*;
 public  class CreditCardList {
     @Override
     public String toString() {
-        return "CreditCardList{" +
-                "creditCardList=" + creditCardList +
-                '}';
+        String string="";
+        for (CreditCard creditCard: creditCardList)
+            string=string+creditCard.toString()+"\n";
+        return string;
     }
 
     ArrayList<CreditCard> creditCardList=new ArrayList<>();
+public void sortbyname(){
 
+
+
+}
     public  void addCreditCard(CreditCard creditCard) {
         creditCardList.add(creditCard);
     }
